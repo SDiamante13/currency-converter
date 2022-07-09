@@ -1,7 +1,5 @@
 package tech.pathtoprogramming.currencyconverter.domain;
 
-import java.nio.charset.StandardCharsets;
-
 class Rates {
     private final double EUR;
     private final double USD;

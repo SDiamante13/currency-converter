@@ -1,6 +1,6 @@
 package tech.pathtoprogramming.currencyconverter.domain;
 
-enum Currency {
+public enum Currency {
     USD,
     EUR,
     GBP
