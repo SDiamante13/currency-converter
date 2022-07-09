@@ -13,6 +13,8 @@ class CurrencyExchangeBoardTest {
     public static final Money USD_MONEY = new Money(BigDecimal.valueOf(100), Currency.USD);
     private final CurrencyExchangeBoard currencyExchangeBoard = new CurrencyExchangeBoard();
 
+    // TODO: You can use this test to verify your live client works for Fixer API
+    // TODO: Currently is disabled due to the 100 calls per month quota that Fixer has.
     @Test
     @Disabled
     void liveCallToFixerAPI() {

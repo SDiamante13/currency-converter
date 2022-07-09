@@ -1,7 +1,5 @@
 package tech.pathtoprogramming.currencyconverter.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,8 +11,6 @@ import tech.pathtoprogramming.currencyconverter.model.CurrencyRequest;
 
 @Controller
 public class CurrencyController {
-
-    private static final Logger log = LoggerFactory.getLogger(CurrencyController.class);
 
     private final MoneyConverter moneyConverter;
 
@@ -31,9 +27,10 @@ public class CurrencyController {
     @PostMapping("/convert")
     public String convertSubmit(@ModelAttribute CurrencyRequest currencyRequest, Model model) {
         model.addAttribute("currencyRequest", currencyRequest);
-        Money money = moneyConverter
-                .convert(currencyRequest.getAmount(), currencyRequest.getStartingCurrency(), currencyRequest.getTargetCurrency());
-        model.addAttribute("exchangedMoney", money);
+
+        // TODO: replace this stub with a call to MoneyConverter
+        Money exchangedMoney = Money.createMoney("96.00", "EUR");
+        model.addAttribute("exchangedMoney", exchangedMoney);
 
         return "result";
     }

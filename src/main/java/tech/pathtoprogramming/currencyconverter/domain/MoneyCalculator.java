@@ -8,6 +8,6 @@ import java.math.BigDecimal;
 public class MoneyCalculator {
 
     public BigDecimal calculate(BigDecimal basePrice, BigDecimal exchangeRate) {
-        return basePrice.multiply(exchangeRate);
+        throw new UnsupportedOperationException("need to implement");
     }
 }
