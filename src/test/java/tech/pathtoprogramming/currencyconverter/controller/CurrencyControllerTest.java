@@ -49,6 +49,7 @@ class CurrencyControllerTest {
                 .andDo(print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.view().name("result"))
-                .andExpect(MockMvcResultMatchers.model().attribute("exchangedMoney", createMoney("96.00", EUR.name())));
+                .andExpect(MockMvcResultMatchers.model().attribute("exchangedMoney",
+                        createMoney("96.00", EUR.name())));
     }
 }

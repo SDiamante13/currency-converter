@@ -1,5 +1,9 @@
 package tech.pathtoprogramming.currencyconverter.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+
 public class CurrencyRequest {
     private String startingCurrency;
     private String targetCurrency;

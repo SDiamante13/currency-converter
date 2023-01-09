@@ -11,9 +11,11 @@ class AMoneyCalculatorShould {
 
     @Test
     void returnTheTargetPriceBasedOnTheBasePriceAndExchangeRate() {
-        BigDecimal expectedTargetPrice = BigDecimal.valueOf(96.00).setScale(2, UNNECESSARY);
+        BigDecimal expectedTargetPrice = BigDecimal.valueOf(96.00).setScale(2,
+                UNNECESSARY);
 
-        BigDecimal actualTargetPrice = new MoneyCalculator().calculate(BigDecimal.valueOf(100), BigDecimal.valueOf(0.96));
+        BigDecimal actualTargetPrice = new MoneyCalculator()
+                .calculate(BigDecimal.valueOf(100), BigDecimal.valueOf(0.96));
 
         assertThat(actualTargetPrice).isEqualTo(expectedTargetPrice);
     }

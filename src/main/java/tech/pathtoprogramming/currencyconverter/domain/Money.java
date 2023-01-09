@@ -12,7 +12,8 @@ public class Money {
     }
 
     public static Money createMoney(String price, String currency) {
-        return new Money(BigDecimal.valueOf(Double.parseDouble(price)), Currency.valueOf(currency));
+        return new Money(BigDecimal.valueOf(Double.parseDouble(price)),
+                Currency.valueOf(currency));
     }
 
     public Currency currency() {
