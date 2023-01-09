@@ -3,7 +3,7 @@ package tech.pathtoprogramming.currencyconverter.domain;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.math.BigDecimal;
+import java.io.IOException;
 
 import static java.math.BigDecimal.valueOf;
 import static java.math.RoundingMode.UNNECESSARY;
@@ -18,8 +18,8 @@ class EndToEndTest {
 
     @DisplayName("given 100 USD at an exchange rate of 0.96 will return 96 Euros")
     @Test
-    void happyPath() {
-        Money expectedMoney = new Money(valueOf(96.00).setScale(3, UNNECESSARY), EUR);
+    void happyPath() throws IOException {
+        Money expectedMoney = new Money(valueOf(96.00).setScale(2, UNNECESSARY), EUR);
 
         Money actualMoney = moneyConverter.convert("100", USD.name(), EUR.name());
 
